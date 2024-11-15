@@ -1,0 +1,81 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@font-face {
+  font-family: 'font';
+  src: url('assets/Rockmosh.ttf') format('truetype');
+}
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@font-face {
+  font-family: 'font';
+  src: url('assets/Rockmosh.ttf') format('truetype');
+}
+
+/* General NavBar Styling */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  font-family: 'font', sans-serif;
+  padding: 0 20px;
+  transition: height 0.3s, padding 0.3s;
+}
+
+/* Navbar List Styling */
+.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  letter-spacing: 3px;
+}
+
+/* Navbar Links */
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+/* Logo styling */
+.navbar li img {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  /* Make the navbar smaller */
+  nav {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .navbar {
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .navbar li a {
+    font-size: 14px; /* Make text smaller */
+    padding: 10px;
+  }
+
+  /* Optional: Remove logo on smaller screens */
+  .navbar li img {
+    display: none;
+  }
+}

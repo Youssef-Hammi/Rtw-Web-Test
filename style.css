@@ -1,0 +1,410 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@font-face {
+    font-family: 'tit';
+    src:url('assets/Rockmosh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+html {
+    cursor: url('assets/cursor.png'), default;
+    scroll-behavior: smooth;
+}
+body {
+    scroll-behavior: smooth;
+    font-family: "New Rocker", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Video Background */
+.video-bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.video-bg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: auto;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+.logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.logo-overlay img {
+    width: 40vw;
+    height: auto;
+}
+.video-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Fixed Background */
+.fixed-bg {
+    background-image: url('assets/vlcsnap-2024-09-16-18h14m58s226-gigapixel-lwcvwcxvow_res-scale-2_00x.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Biography Section Styling */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    height: auto;
+    min-height: 100vh;
+}
+.bio-text {
+    max-width: 800px;
+    margin-top: 5%;
+    margin-bottom: 50px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Member Frames Styling */
+.member-frames {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+}
+.frame {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+.frame img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.frame h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+.frame p {
+    font-size: 0.9em;
+    color: #ddd;
+}
+.frame:hover {
+    transform: scale(1.05);
+}
+
+/* Music Section Styling */
+#music {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    color: white;
+    padding: 40px;
+}
+.video-row, .spotify-row {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+.youtube-video iframe {
+    width: 100%;
+    height: 400px;
+    max-width: 800px;
+}
+.spotify-embeds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+.spotify-embeds iframe {
+    border-radius: 8px;
+    width: 100vw;
+    height: 250px;
+}
+
+/* Events Section Styling */
+#events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+#events h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+}
+.event-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+.event-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+.event-card p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+.event-card .event-description {
+    font-size: 0.9em;
+    color: #ddd;
+}
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+/* Learn More Button */
+.btn-learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    color: white;
+    background-color: #0e0d0d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-learn-more:hover {
+    background-color: #444241;
+}
+
+/* Gallery Section Styling */
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+#gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.gallery-description {
+    font-size: 1em;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    width: 100%;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact Section Styling */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.contact-info {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #ddd;
+}
+.contact-info p {
+    margin: 10px 0;
+}
+.contact-info i {
+    margin-right: 8px;
+    color: #ffffff;
+}
+
+/* Newsletter and Social Media */
+.newsletter, .social-media {
+    margin: 20px 0;
+}
+.newsletter h3, .social-media h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.newsletter p {
+    font-size: 1em;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #0a0909;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.newsletter-form button:hover {
+    background-color: #030303;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.social-icons a {
+    color: #ddd;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: white;
+}
+
+/* Footer Section */
+footer {
+    background-color: #0a0909;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    /* Adjustments for mobile */
+    .content-section {
+        padding: 20px;
+    }
+    .bio-text {
+        font-size: 0.9em;
+        margin-top: 20px;
+    }
+    .member-frames {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .frame {
+        width: 80vw;
+        
+    }
+    .youtube-video iframe {
+        height: 250px;
+    }
+    .spotify-embeds iframe {
+        width: 100vw;
+        height: 220px;
+    }
+    .events-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-card {
+        width: 80vw;
+        margin-bottom: 20px;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .gallery-item img {
+        max-width: 100%;
+    }
+    .social-icons {
+        gap: 10px;
+    }
+    .newsletter-form input[type="email"] {
+        width: 200px;
+    }
+}
