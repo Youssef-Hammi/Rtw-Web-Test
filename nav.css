@@ -25,7 +25,6 @@ nav {
   align-items: center;
   height: 90px;
   font-family: 'font', sans-serif;
-  padding: 0 20px;
   transition: height 0.3s, padding 0.3s;
 }
 
@@ -61,7 +60,7 @@ nav {
   /* Make the navbar smaller */
   nav {
     height: 60px;
-    padding: 0 10px;
+    padding: 0;
   }
 
   .navbar {

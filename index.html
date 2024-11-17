@@ -25,16 +25,17 @@
 
   
 
-  <section class="video-bg">
-    <video autoplay loop muted playsinline>
-      <source src="assets/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <!-- Centered Logo -->
-    <div class="logo-overlay">
-      <img src="assets/RTW LOGO10.png" alt="Logo">
-    </div>
-  </section>
+<section class="video-bg">
+  <video id="bg-video" autoplay loop muted playsinline>
+    <source id="video-source" src="assets/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Centered Logo -->
+  <div class="logo-overlay">
+    <img src="assets/RTW LOGO10.png" alt="Logo">
+  </div>
+</section>
+
   <!-- Main Content with Fixed Background Image -->
 <div class="fixed-bg">
   <!-- Section 1 -->
@@ -71,7 +72,7 @@
       <div class="frame" data-aos="fade-up" data-aos-delay="200">
         <img src="assets/drum.JPG" alt="Guitarist">
         <h3>Youssef</h3>
-        <p>Drummer</p>
+        <p>Drums</p>
       </div>
 
 
@@ -132,30 +133,34 @@
   
   <!-- Section 4 -->
   <section class="content-section" id="section4">
-    <h2 style="margin-top: 7%;font-family: 'tit', sans-serif;">Gallery</h2>
-  <p class="gallery-description">Explore moments from our shows, recording sessions, and more.</p>
-  
-  <!-- Gallery Grid -->
-  <div class="gallery-grid">
-    <a href="assets/Ruin The Weak-3.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
-      <img src="assets/Ruin The Weak-3.jpg" alt="Gallery Image 1">
-    </a>
-    <a href="assets/Ruin The Weak-4.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
-      <img src="assets/Ruin The Weak-4.jpg" alt="Gallery Image 1">
-    </a>
-    <a href="assets/459788296_480773178267989_1227401542251098671_n.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
-      <img src="assets/459788296_480773178267989_1227401542251098671_n.jpg" alt="Gallery Image 1">
-    </a>
-    <a href="assets/Ruin The Weak-7.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
-      <img src="assets/Ruin The Weak-7.jpg" alt="Gallery Image 1">
-    </a>
-    </a>
+    <h2 style="margin-top: 7%; font-family: 'tit', sans-serif;">Gallery</h2>
+    <p class="gallery-description">Explore moments from our shows, recording sessions, and more.</p>
     
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <a href="assets/Ruin The Weak-3.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
+        <img src="assets/Ruin The Weak-3.jpg" alt="Ruin The Weak - Show 3">
+      </a>
+      <a href="assets/Ruin The Weak-4.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
+        <img src="assets/Ruin The Weak-4.jpg" alt="Ruin The Weak - Show 4">
+      </a>
+      <a href="assets/Ruin The Weak-7.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
+        <img src="assets/Ruin The Weak-7.jpg" alt="Ruin The Weak - Show 7">
+      </a>
+      <a href="assets/459788296_480773178267989_1227401542251098671_n.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
+        <img src="assets/459788296_480773178267989_1227401542251098671_n.jpg" alt="Ruin The Weak - Show 5">
+      </a>
+      <a href="assets/DSC_4912.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
+        <img src="assets/DSC_4912.jpg" alt="Ruin The Weak - Show 5">
+      </a>
+      <a href="assets/IMG_20230723_015534_751-gigapixel-low_res-scale-2_00x.jpg" class="gallery-item" data-lightbox="gallery" target="_blank">
+        <img src="assets/IMG_20230723_015534_751-gigapixel-low_res-scale-2_00x.jpg" alt="Ruin The Weak - Show 5">
+      </a>
+      <!-- Add 16 more image links here -->
+    </div>
+</section>
 
-    </a>
-    <!-- Add more images as needed -->
-  </div>
-  </section>
+  
   
   <!-- Section 5 -->
   <section class="content-section" id="section5">
@@ -198,6 +203,11 @@
   
   
 </div>
+<!-- Contact Us Button -->
+<a href="#section5" class="contact-button">
+  <i class="fas fa-phone"></i> Contact Us
+</a>
+
 <script>
   // Initialize AOS
   AOS.init();
